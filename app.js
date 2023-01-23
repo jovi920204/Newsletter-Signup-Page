@@ -37,7 +37,7 @@ app.post("/", function(req, res){
         method: "POST",
         auth: "jovi:" + process.env.API
     }
-
+    console.log(process.env.API);
     const request = https.request(url, options, function(response){
         response.on("data", function(data){
             console.log(JSON.parse(data));
